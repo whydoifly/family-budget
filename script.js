@@ -20,4 +20,12 @@ sumForm.addEventListener('submit', (e) => {
   sumForm.querySelector('input').value = '';
 });
 
-
+let container = document.querySelector('.container');
+let tags = document.createElement('div');
+container.append(tags);
+categories.reverse()
+categories.forEach(Element => {
+  let span = document.createElement('span');
+  span.textContent = Element;
+  tags.append(span);
+});
